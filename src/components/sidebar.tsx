@@ -1,27 +1,11 @@
+import type { UserResult } from '../userData.ts';
+
 function Sidebar({ selectedPixel, currentUser }: {
-    selectedPixel: { x: number; y: number; color?: string } | null,
-    currentUser: {
-        error?: number, 
-        user_id: number, 
-        data: { 
-            username: string, 
-            lastPlacedDate: number, 
-            lastBitCount: number, 
-            maxBits: number, 
-            extraTime: number, 
-            group: string, 
-            placeCount: number, 
-            replaced: number, 
-            placedBreak: number, 
-            bonus: string[], 
-            lastUpdated: string, 
-            place: number, 
-            bonusSet: object 
-        }
-    } | null
-    }) {
+    selectedPixel: { x: number; y: number; color: string } | null;
+    currentUser: UserResult | null;
+}) {
     return (
-        <div class="sidebarParent">
+        <div className="sidebarParent">
             <div id="pixelData">
                 {selectedPixel && (
                     <>
@@ -35,12 +19,14 @@ function Sidebar({ selectedPixel, currentUser }: {
                 {currentUser && (
                     <>
                         <h3>User Data</h3>
-                        {currentUser.error == 1 ? (
-                            <p>Error: {currentUser.error}</p>
+                        {currentUser.error === 1 ? (
+                            <p>No user data: {currentUser.reason}</p>
                         ) : (
                             <>
+                                <p>Position: ({currentUser.x}, {currentUser.y})</p>
+                                <p>Username: {currentUser.user_id}</p>
                                 <p>Username: {currentUser.data.username}</p>
-                                <p>Last Placed Date: {new Date(currentUser.data.lastPlacedDate * 1000).toLocaleString()}</p>
+                                <p>Last Placed: {new Date(currentUser.data.lastPlacedDate * 1000).toLocaleString()}</p>
                                 <p>Last Bit Count: {currentUser.data.lastBitCount}</p>
                                 <p>Max Bits: {currentUser.data.maxBits}</p>
                                 <p>Extra Time: {currentUser.data.extraTime}</p>
@@ -57,7 +43,7 @@ function Sidebar({ selectedPixel, currentUser }: {
                 )}
             </div>
         </div>
-    )
+    );
 }
 
-export default Sidebar
+export default Sidebar;

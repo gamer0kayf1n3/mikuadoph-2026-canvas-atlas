@@ -4,9 +4,9 @@
     --light: #cbd5f2;
     --text: #000000;
 
-    --bs: box-shadow: 7px 7px 21px 0px rgba(0,0,0,0.32);
-    --wbs: 7px 7px 21px 0px rgba(0,0,0,0.32);
-    --mbs: 7px 7px 21px 0px rgba(0,0,0,0.32);
+    --bs: box-shadow: 7px 7px 21px 0px rgba(0, 0, 0, 0.32);
+    --wbs: 7px 7px 21px 0px rgba(0, 0, 0, 0.32);
+    --mbs: 7px 7px 21px 0px rgba(0, 0, 0, 0.32);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,11 +16,13 @@
         --text: #ffffff;
     }
 }
+
 body {
     overflow: hidden;
     margin: 0;
     padding: 0;
 }
+
 .coords {
     width: 100px;
     height: 50px;
@@ -55,7 +57,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    width: 25%;
+    width: 400px;
     height: 100%;
     display: flex;
     justify-content: flex-start;
@@ -63,5 +65,17 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: stretch;
-    background-color: var(--light);
+}
+
+.sidebarParent #pixelData,
+.sidebarParent #userData {
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    corner-shape: squircle;
+    border-radius: 100px;
+    box-shadow: var(--bs);
+    -webkit-box-shadow: var(--wbs);
+    -moz-box-shadow: var(--mbs);
+    background-color: var(--light)  ;
 }

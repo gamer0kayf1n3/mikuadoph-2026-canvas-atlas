@@ -12,7 +12,11 @@ const MAX_SCALE = 100;
 const SMOOTH = 0.12;
 const DRAG_THRESHOLD = 4;
 
+
 function Canvas({ onOutofFocus, onPixelClick, onTransformChange }) {
+
+    const gridRef = useRef<number[][] | null>(null);
+
     const containerRef = useRef<HTMLDivElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const highlightRef = useRef<HTMLDivElement>(null);
@@ -37,9 +41,9 @@ function Canvas({ onOutofFocus, onPixelClick, onTransformChange }) {
         if (!el || !p) return;
         const c = current.current;
         el.style.display = 'block';
-        el.style.left   = `${p.x * c.scale + c.x}px`;
-        el.style.top    = `${p.y * c.scale + c.y}px`;
-        el.style.width  = `${c.scale}px`;
+        el.style.left = `${p.x * c.scale + c.x}px`;
+        el.style.top = `${p.y * c.scale + c.y}px`;
+        el.style.width = `${c.scale}px`;
         el.style.height = `${c.scale}px`;
     }
 
@@ -73,6 +77,7 @@ function Canvas({ onOutofFocus, onPixelClick, onTransformChange }) {
         fetch('./canvas.json')
             .then(res => res.json())
             .then((grid: number[][]) => {
+                gridRef.current = grid;
                 const canvas = canvasRef.current;
                 const container = containerRef.current;
                 if (!canvas || !container) return;
@@ -90,7 +95,7 @@ function Canvas({ onOutofFocus, onPixelClick, onTransformChange }) {
                     for (let x = 0; x < width; x++) {
                         const hex = COLORS[grid[y][x]] ?? '#000000';
                         const idx = (y * width + x) * 4;
-                        imageData.data[idx]     = parseInt(hex.slice(1, 3), 16);
+                        imageData.data[idx] = parseInt(hex.slice(1, 3), 16);
                         imageData.data[idx + 1] = parseInt(hex.slice(3, 5), 16);
                         imageData.data[idx + 2] = parseInt(hex.slice(5, 7), 16);
                         imageData.data[idx + 3] = 255;
@@ -98,7 +103,7 @@ function Canvas({ onOutofFocus, onPixelClick, onTransformChange }) {
                 }
                 ctx.putImageData(imageData, 0, 0);
 
-                const initX = (container.offsetWidth  - width  * target.current.scale) / 2;
+                const initX = (container.offsetWidth - width * target.current.scale) / 2;
                 const initY = (container.offsetHeight - height * target.current.scale) / 2;
                 target.current.x = initX;
                 target.current.y = initY;
@@ -123,14 +128,15 @@ function Canvas({ onOutofFocus, onPixelClick, onTransformChange }) {
 
     function hitTestPixel(clientX: number, clientY: number) {
         const container = containerRef.current!;
+        const grid = gridRef.current;
+        if (!grid) return;
         const rect = container.getBoundingClientRect();
         const canvasX = Math.floor((clientX - rect.left - current.current.x) / current.current.scale);
-        const canvasY = Math.floor((clientY - rect.top  - current.current.y) / current.current.scale);
+        const canvasY = Math.floor((clientY - rect.top - current.current.y) / current.current.scale);
         showHighlight(canvasX, canvasY);
-        onPixelClick?.(canvasX, canvasY);
+        onPixelClick?.(canvasX, canvasY, COLORS[grid[canvasY][canvasX]] ?? '#000000');
         onTransformChange?.(current.current.x, current.current.y, current.current.scale);
     }
-
     // --- Mouse ---
 
     function onMouseDown(e: React.MouseEvent) {
@@ -155,13 +161,13 @@ function Canvas({ onOutofFocus, onPixelClick, onTransformChange }) {
         onOutofFocus();
         clearHighlight();
     }
-
     function onMouseUp(e: React.MouseEvent) {
-        if (drag.current.active && !drag.current.didDrag) {
-            hitTestPixel(e.clientX, e.clientY);
-        }
+        const wasClick = drag.current.active && !drag.current.didDrag;
         drag.current.active = false;
         drag.current.didDrag = false;
+        if (wasClick) {
+            hitTestPixel(e.clientX, e.clientY);
+        }
     }
 
     function onMouseLeave() {
