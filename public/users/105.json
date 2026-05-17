@@ -1,0 +1,20 @@
+{
+  "user_id": 105,
+  "fetched_at": "20260508_200020",
+  "data": {
+    "id": 105,
+    "username": "weeews",
+    "lastPlacedDate": "2026-04-26T11:07:21.614Z",
+    "lastBitCount": 4,
+    "maxBits": 5,
+    "extraTime": 0,
+    "group": "miku",
+    "placeCount": 1,
+    "replaced": 1,
+    "placedBreak": 0,
+    "bonus": [],
+    "lastUpdated": "2026-04-28T17:16:51.491Z",
+    "place": 40,
+    "bonusSet": {}
+  }
+}

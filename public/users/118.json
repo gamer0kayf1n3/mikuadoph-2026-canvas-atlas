@@ -1,0 +1,21 @@
+{
+  "user_id": 118,
+  "fetched_at": "20260508_195928",
+  "data": {
+    "id": 118,
+    "username": "SunglowSmiley",
+    "lastPlacedDate": 1777994704095,
+    "lastBitCount": 0,
+    "maxBits": 5,
+    "extraTime": 2035,
+    "group": "ado",
+    "placeCount": 10,
+    "replaced": 8,
+    "placedBreak": 0,
+    "bonus": [],
+    "lastUpdated": "2026-05-05T15:22:50.523Z",
+    "place": 40,
+    "bonusSet": {},
+    "firstLogin": false
+  }
+}

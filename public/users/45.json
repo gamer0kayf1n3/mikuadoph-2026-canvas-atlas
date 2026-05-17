@@ -1,0 +1,20 @@
+{
+  "user_id": 45,
+  "fetched_at": "20260508_200003",
+  "data": {
+    "id": 45,
+    "username": "boiiwithgalstones",
+    "lastPlacedDate": "2026-04-24T13:52:43.368Z",
+    "lastBitCount": 5,
+    "maxBits": 5,
+    "extraTime": 0,
+    "group": "miku",
+    "placeCount": 0,
+    "replaced": 0,
+    "placedBreak": 0,
+    "bonus": [],
+    "lastUpdated": "2026-04-24T13:52:43.368Z",
+    "place": 41,
+    "bonusSet": {}
+  }
+}

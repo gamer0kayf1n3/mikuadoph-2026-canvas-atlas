@@ -1,0 +1,23 @@
+{
+  "user_id": 110,
+  "fetched_at": "20260508_200032",
+  "data": {
+    "id": 110,
+    "username": "Silicosis",
+    "lastPlacedDate": 1777724351833,
+    "lastBitCount": 0,
+    "maxBits": 7,
+    "extraTime": 11088,
+    "group": "miku",
+    "placeCount": 341,
+    "replaced": 79,
+    "placedBreak": 0,
+    "bonus": [
+      "mIkuCoMeBacK27pLeAsE",
+      "challenge-starter-sketcher"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.491Z",
+    "place": 20,
+    "bonusSet": {}
+  }
+}

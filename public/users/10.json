@@ -1,0 +1,28 @@
+{
+  "user_id": 10,
+  "fetched_at": "20260508_195946",
+  "data": {
+    "id": 10,
+    "username": "Nogamesora",
+    "lastPlacedDate": "2026-04-27T16:44:06.189Z",
+    "lastBitCount": 0,
+    "maxBits": 12,
+    "extraTime": 6204,
+    "group": "ado",
+    "placeCount": 1200,
+    "replaced": 13,
+    "placedBreak": 43,
+    "bonus": [
+      "challenge-fb-follow-1",
+      "challenge-starter-sketcher",
+      "challenge-miku-390",
+      "challenge-fb-follow-2",
+      "challenge-master-painter",
+      "challenge-artistic-virtuoso",
+      "challenge-ado-1024"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.489Z",
+    "place": 9,
+    "bonusSet": {}
+  }
+}

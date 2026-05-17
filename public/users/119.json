@@ -1,0 +1,21 @@
+{
+  "user_id": 119,
+  "fetched_at": "20260508_195929",
+  "data": {
+    "id": 119,
+    "username": "dontmindmegng",
+    "lastPlacedDate": "2026-05-08T05:50:05.236Z",
+    "lastBitCount": 5,
+    "maxBits": 5,
+    "extraTime": 0,
+    "group": "miku",
+    "placeCount": 0,
+    "replaced": 0,
+    "placedBreak": 0,
+    "bonus": [],
+    "lastUpdated": "2026-05-08T05:50:05.236Z",
+    "place": 41,
+    "bonusSet": {},
+    "firstLogin": false
+  }
+}

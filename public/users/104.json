@@ -1,0 +1,20 @@
+{
+  "user_id": 104,
+  "fetched_at": "20260508_200019",
+  "data": {
+    "id": 104,
+    "username": "saikichan",
+    "lastPlacedDate": "2026-04-26T06:39:50.918Z",
+    "lastBitCount": 0,
+    "maxBits": 5,
+    "extraTime": 856,
+    "group": "miku",
+    "placeCount": 8,
+    "replaced": 2,
+    "placedBreak": 0,
+    "bonus": [],
+    "lastUpdated": "2026-04-28T17:16:51.491Z",
+    "place": 37,
+    "bonusSet": {}
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "user_id": 17,
+  "fetched_at": "20260508_195955",
+  "data": {
+    "id": 17,
+    "username": "ogpopulars",
+    "lastPlacedDate": 1778241585012,
+    "lastBitCount": 1,
+    "maxBits": 17,
+    "extraTime": 1902,
+    "group": "miku",
+    "placeCount": 6059,
+    "replaced": 1397,
+    "placedBreak": 1145,
+    "bonus": [
+      "mIkuCoMeBacK27pLeAsE",
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2",
+      "challenge-twitter-share",
+      "challenge-starter-sketcher",
+      "shrimpado1024",
+      "challenge-miku-390",
+      "challenge-master-painter",
+      "challenge-replace",
+      "challenge-artistic-virtuoso",
+      "challenge-ado-1024",
+      "challenge-grandmaster-artisan"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.486Z",
+    "place": 3,
+    "bonusSet": {}
+  }
+}

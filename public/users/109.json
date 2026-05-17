@@ -1,0 +1,26 @@
+{
+  "user_id": 109,
+  "fetched_at": "20260508_200029",
+  "data": {
+    "id": 109,
+    "username": "kumozd",
+    "lastPlacedDate": 1777489455703,
+    "lastBitCount": 0,
+    "maxBits": 10,
+    "extraTime": 5019,
+    "group": "ado",
+    "placeCount": 571,
+    "replaced": 26,
+    "placedBreak": 8,
+    "bonus": [
+      "challenge-starter-sketcher",
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2",
+      "challenge-miku-390",
+      "challenge-master-painter"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.491Z",
+    "place": 16,
+    "bonusSet": {}
+  }
+}

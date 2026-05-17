@@ -1,0 +1,24 @@
+{
+  "user_id": 114,
+  "fetched_at": "20260508_195925",
+  "data": {
+    "id": 114,
+    "username": "Peachmangopie",
+    "lastPlacedDate": "2026-04-28T14:59:25.477Z",
+    "lastBitCount": 0,
+    "maxBits": 8,
+    "extraTime": 12136,
+    "group": "ado",
+    "placeCount": 61,
+    "replaced": 5,
+    "placedBreak": 0,
+    "bonus": [
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2",
+      "mIkuCoMeBacK27pLeAsE"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.492Z",
+    "place": 25,
+    "bonusSet": {}
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "user_id": 112,
+  "fetched_at": "20260508_200035",
+  "data": {
+    "id": 112,
+    "username": "allentube",
+    "lastPlacedDate": "2026-04-28T14:02:39.858Z",
+    "lastBitCount": 0,
+    "maxBits": 13,
+    "extraTime": 806,
+    "group": "miku",
+    "placeCount": 995,
+    "replaced": 19,
+    "placedBreak": 182,
+    "bonus": [
+      "mIkuCoMeBacK27pLeAsE",
+      "shrimpado1024",
+      "challenge-twitter-share",
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2",
+      "challenge-starter-sketcher",
+      "challenge-miku-390",
+      "challenge-master-painter"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.491Z",
+    "place": 11,
+    "bonusSet": {}
+  }
+}

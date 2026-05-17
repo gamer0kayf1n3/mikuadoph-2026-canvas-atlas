@@ -1,0 +1,26 @@
+{
+  "user_id": 14,
+  "fetched_at": "20260508_195951",
+  "data": {
+    "id": 14,
+    "username": "DarcDraconic",
+    "lastPlacedDate": 1777776728951,
+    "lastBitCount": 0,
+    "maxBits": 10,
+    "extraTime": 5224,
+    "group": "ado",
+    "placeCount": 720,
+    "replaced": 60,
+    "placedBreak": 92,
+    "bonus": [
+      "shrimpado1024",
+      "challenge-starter-sketcher",
+      "challenge-miku-390",
+      "challenge-fb-follow-1",
+      "challenge-master-painter"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.494Z",
+    "place": 14,
+    "bonusSet": {}
+  }
+}

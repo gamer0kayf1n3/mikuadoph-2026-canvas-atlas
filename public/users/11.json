@@ -1,0 +1,28 @@
+{
+  "user_id": 11,
+  "fetched_at": "20260508_195947",
+  "data": {
+    "id": 11,
+    "username": "katypawz",
+    "lastPlacedDate": "2026-04-28T03:55:31.253Z",
+    "lastBitCount": 0,
+    "maxBits": 12,
+    "extraTime": 993,
+    "group": "miku",
+    "placeCount": 906,
+    "replaced": 0,
+    "placedBreak": 36,
+    "bonus": [
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2",
+      "challenge-twitter-share",
+      "challenge-starter-sketcher",
+      "mIkuCoMeBacK27pLeAsE",
+      "challenge-miku-390",
+      "challenge-master-painter"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.492Z",
+    "place": 12,
+    "bonusSet": {}
+  }
+}

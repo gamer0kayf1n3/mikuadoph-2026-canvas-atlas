@@ -1,0 +1,20 @@
+{
+  "user_id": 47,
+  "fetched_at": "20260508_200005",
+  "data": {
+    "id": 47,
+    "username": "boiiwithglasses",
+    "lastPlacedDate": "2026-04-24T14:14:46.983Z",
+    "lastBitCount": 0,
+    "maxBits": 5,
+    "extraTime": 5343,
+    "group": "miku",
+    "placeCount": 89,
+    "replaced": 3,
+    "placedBreak": 0,
+    "bonus": [],
+    "lastUpdated": "2026-04-28T17:16:51.494Z",
+    "place": 24,
+    "bonusSet": {}
+  }
+}

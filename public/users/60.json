@@ -1,0 +1,20 @@
+{
+  "user_id": 60,
+  "fetched_at": "20260508_200011",
+  "data": {
+    "id": 60,
+    "username": "sunnyz359",
+    "lastPlacedDate": "2026-04-24T17:51:21.869Z",
+    "lastBitCount": 4,
+    "maxBits": 5,
+    "extraTime": 0,
+    "group": "ado",
+    "placeCount": 8,
+    "replaced": 1,
+    "placedBreak": 0,
+    "bonus": [],
+    "lastUpdated": "2026-04-28T17:16:51.486Z",
+    "place": 37,
+    "bonusSet": {}
+  }
+}

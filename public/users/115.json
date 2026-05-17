@@ -1,0 +1,26 @@
+{
+  "user_id": 115,
+  "fetched_at": "20260508_200038",
+  "data": {
+    "id": 115,
+    "username": "hime",
+    "lastPlacedDate": 1778241585788,
+    "lastBitCount": 0,
+    "maxBits": 9,
+    "extraTime": 4678,
+    "group": "miku",
+    "placeCount": 46,
+    "replaced": 34,
+    "placedBreak": 0,
+    "bonus": [
+      "mIkuCoMeBacK27pLeAsE",
+      "challenge-twitter-share",
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2"
+    ],
+    "lastUpdated": "2026-04-28T21:05:43.742Z",
+    "place": 39,
+    "bonusSet": {},
+    "firstLogin": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "user_id": 108,
+  "fetched_at": "20260508_200028",
+  "data": {
+    "id": 108,
+    "username": "inukaishouvt",
+    "lastPlacedDate": "2026-04-28T04:18:24.025Z",
+    "lastBitCount": 0,
+    "maxBits": 9,
+    "extraTime": 6651,
+    "group": "miku",
+    "placeCount": 154,
+    "replaced": 54,
+    "placedBreak": 12,
+    "bonus": [
+      "challenge-twitter-share",
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2",
+      "mIkuCoMeBacK27pLeAsE"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.494Z",
+    "place": 23,
+    "bonusSet": {}
+  }
+}

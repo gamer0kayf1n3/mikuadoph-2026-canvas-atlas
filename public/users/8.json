@@ -1,0 +1,29 @@
+{
+  "user_id": 8,
+  "fetched_at": "20260508_195943",
+  "data": {
+    "id": 8,
+    "username": "erenn",
+    "lastPlacedDate": "2026-04-26T17:46:34.241Z",
+    "lastBitCount": 4,
+    "maxBits": 13,
+    "extraTime": 8941,
+    "group": "miku",
+    "placeCount": 591,
+    "replaced": 97,
+    "placedBreak": 29,
+    "bonus": [
+      "challenge-twitter-share",
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2",
+      "challenge-starter-sketcher",
+      "shrimpado1024",
+      "mIkuCoMeBacK27pLeAsE",
+      "challenge-miku-390",
+      "challenge-master-painter"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.489Z",
+    "place": 15,
+    "bonusSet": {}
+  }
+}

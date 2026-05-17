@@ -1,0 +1,23 @@
+{
+  "user_id": 57,
+  "fetched_at": "20260508_200007",
+  "data": {
+    "id": 57,
+    "username": "MCMIGZ",
+    "lastPlacedDate": "2026-04-24T14:23:38.000Z",
+    "lastBitCount": 0,
+    "maxBits": 7,
+    "extraTime": 11180,
+    "group": "miku",
+    "placeCount": 31,
+    "replaced": 1,
+    "placedBreak": 0,
+    "bonus": [
+      "shrimpado1024",
+      "challenge-fb-follow-1"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.494Z",
+    "place": 30,
+    "bonusSet": {}
+  }
+}

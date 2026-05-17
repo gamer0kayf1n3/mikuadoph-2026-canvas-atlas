@@ -1,0 +1,26 @@
+{
+  "user_id": 22,
+  "fetched_at": "20260508_200001",
+  "data": {
+    "id": 22,
+    "username": "Norb",
+    "lastPlacedDate": "2026-04-24T14:08:09.754Z",
+    "lastBitCount": 0,
+    "maxBits": 10,
+    "extraTime": 4728,
+    "group": "ado",
+    "placeCount": 217,
+    "replaced": 7,
+    "placedBreak": 0,
+    "bonus": [
+      "shrimpado1024",
+      "challenge-twitter-share",
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2",
+      "challenge-starter-sketcher"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.494Z",
+    "place": 22,
+    "bonusSet": {}
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "user_id": 59,
+  "fetched_at": "20260508_200010",
+  "data": {
+    "id": 59,
+    "username": "novaa807",
+    "lastPlacedDate": "2026-04-24T14:43:52.674Z",
+    "lastBitCount": 1,
+    "maxBits": 7,
+    "extraTime": 8304,
+    "group": "miku",
+    "placeCount": 9,
+    "replaced": 1,
+    "placedBreak": 0,
+    "bonus": [
+      "shrimpado1024",
+      "mIkuCoMeBacK27pLeAsE"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.494Z",
+    "place": 35,
+    "bonusSet": {}
+  }
+}

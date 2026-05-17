@@ -50,3 +50,18 @@ body {
     -webkit-box-shadow: var(--wbs);
     -moz-box-shadow: var(--mbs);
 }
+
+.sidebarParent {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    background-color: var(--light);
+}

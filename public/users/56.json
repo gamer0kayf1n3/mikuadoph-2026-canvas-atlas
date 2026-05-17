@@ -1,0 +1,26 @@
+{
+  "user_id": 56,
+  "fetched_at": "20260508_200006",
+  "data": {
+    "id": 56,
+    "username": "Riahlity",
+    "lastPlacedDate": "2026-04-25T02:44:38.426Z",
+    "lastBitCount": 0,
+    "maxBits": 10,
+    "extraTime": 6254,
+    "group": "ado",
+    "placeCount": 229,
+    "replaced": 10,
+    "placedBreak": 0,
+    "bonus": [
+      "shrimpado1024",
+      "challenge-twitter-share",
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2",
+      "challenge-starter-sketcher"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.494Z",
+    "place": 21,
+    "bonusSet": {}
+  }
+}

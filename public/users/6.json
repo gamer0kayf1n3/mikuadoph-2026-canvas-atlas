@@ -1,0 +1,22 @@
+{
+  "user_id": 6,
+  "fetched_at": "20260508_195940",
+  "data": {
+    "id": 6,
+    "username": "dd1amond",
+    "lastPlacedDate": "2026-04-27T12:58:30.321Z",
+    "lastBitCount": 0,
+    "maxBits": 6,
+    "extraTime": 11148,
+    "group": "miku",
+    "placeCount": 317,
+    "replaced": 42,
+    "placedBreak": 0,
+    "bonus": [
+      "challenge-starter-sketcher"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.494Z",
+    "place": 20,
+    "bonusSet": {}
+  }
+}

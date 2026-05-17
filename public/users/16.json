@@ -1,0 +1,28 @@
+{
+  "user_id": 16,
+  "fetched_at": "20260508_195954",
+  "data": {
+    "id": 16,
+    "username": "ikeat",
+    "lastPlacedDate": "2026-04-25T12:32:13.144Z",
+    "lastBitCount": 7,
+    "maxBits": 12,
+    "extraTime": 8249,
+    "group": "ado",
+    "placeCount": 516,
+    "replaced": 4,
+    "placedBreak": 0,
+    "bonus": [
+      "shrimpado1024",
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2",
+      "challenge-starter-sketcher",
+      "mIkuCoMeBacK27pLeAsE",
+      "challenge-miku-390",
+      "challenge-master-painter"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.493Z",
+    "place": 17,
+    "bonusSet": {}
+  }
+}

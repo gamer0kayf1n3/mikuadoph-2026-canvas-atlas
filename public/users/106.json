@@ -1,0 +1,24 @@
+{
+  "user_id": 106,
+  "fetched_at": "20260508_200021",
+  "data": {
+    "id": 106,
+    "username": "geebeedee",
+    "lastPlacedDate": "2026-04-26T16:11:15.566Z",
+    "lastBitCount": 0,
+    "maxBits": 8,
+    "extraTime": 4336,
+    "group": "miku",
+    "placeCount": 10,
+    "replaced": 7,
+    "placedBreak": 0,
+    "bonus": [
+      "challenge-twitter-share",
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.491Z",
+    "place": 33,
+    "bonusSet": {}
+  }
+}

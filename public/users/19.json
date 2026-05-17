@@ -1,0 +1,30 @@
+{
+  "user_id": 19,
+  "fetched_at": "20260508_195956",
+  "data": {
+    "id": 19,
+    "username": "kyokkuho",
+    "lastPlacedDate": 1777783080913,
+    "lastBitCount": 0,
+    "maxBits": 14,
+    "extraTime": 2382,
+    "group": "miku",
+    "placeCount": 1805,
+    "replaced": 25,
+    "placedBreak": 14,
+    "bonus": [
+      "mIkuCoMeBacK27pLeAsE",
+      "challenge-fb-follow-2",
+      "challenge-fb-follow-1",
+      "challenge-twitter-share",
+      "challenge-starter-sketcher",
+      "challenge-miku-390",
+      "challenge-master-painter",
+      "challenge-artistic-virtuoso",
+      "challenge-ado-1024"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.494Z",
+    "place": 7,
+    "bonusSet": {}
+  }
+}

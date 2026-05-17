@@ -1,0 +1,22 @@
+{
+  "user_id": 58,
+  "fetched_at": "20260508_200009",
+  "data": {
+    "id": 58,
+    "username": "xelia",
+    "lastPlacedDate": "2026-04-24T15:08:30.022Z",
+    "lastBitCount": 0,
+    "maxBits": 6,
+    "extraTime": 10154,
+    "group": "ado",
+    "placeCount": 41,
+    "replaced": 2,
+    "placedBreak": 0,
+    "bonus": [
+      "shrimpado1024"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.494Z",
+    "place": 26,
+    "bonusSet": {}
+  }
+}

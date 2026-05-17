@@ -1,0 +1,23 @@
+{
+  "user_id": 21,
+  "fetched_at": "20260508_195959",
+  "data": {
+    "id": 21,
+    "username": "Lazlo",
+    "lastPlacedDate": "2026-04-24T14:39:08.435Z",
+    "lastBitCount": 0,
+    "maxBits": 7,
+    "extraTime": 1480,
+    "group": "miku",
+    "placeCount": 362,
+    "replaced": 29,
+    "placedBreak": 0,
+    "bonus": [
+      "challenge-fb-follow-1",
+      "challenge-starter-sketcher"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.494Z",
+    "place": 18,
+    "bonusSet": {}
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "user_id": 2,
+  "fetched_at": "20260508_195935",
+  "data": {
+    "id": 2,
+    "username": "GeloFunz",
+    "lastPlacedDate": 1777738938991,
+    "lastBitCount": 0,
+    "maxBits": 15,
+    "extraTime": 742,
+    "group": "miku",
+    "placeCount": 2695,
+    "replaced": 845,
+    "placedBreak": 92,
+    "bonus": [
+      "mIkuCoMeBacK27pLeAsE",
+      "challenge-fb-follow-2",
+      "challenge-fb-follow-1",
+      "challenge-twitter-share",
+      "challenge-starter-sketcher",
+      "challenge-miku-390",
+      "challenge-master-painter",
+      "challenge-artistic-virtuoso",
+      "challenge-ado-1024",
+      "challenge-replace"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.492Z",
+    "place": 6,
+    "bonusSet": {}
+  }
+}

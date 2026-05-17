@@ -1,0 +1,20 @@
+{
+  "user_id": 63,
+  "fetched_at": "20260508_200014",
+  "data": {
+    "id": 63,
+    "username": "Ranni",
+    "lastPlacedDate": "2026-04-24T15:17:15.799Z",
+    "lastBitCount": 0,
+    "maxBits": 5,
+    "extraTime": 810,
+    "group": "ado",
+    "placeCount": 38,
+    "replaced": 0,
+    "placedBreak": 0,
+    "bonus": [],
+    "lastUpdated": "2026-04-28T17:16:51.494Z",
+    "place": 27,
+    "bonusSet": {}
+  }
+}

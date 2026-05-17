@@ -1,0 +1,33 @@
+{
+  "user_id": 13,
+  "fetched_at": "20260508_195950",
+  "data": {
+    "id": 13,
+    "username": "nagito",
+    "lastPlacedDate": 1778241587763,
+    "lastBitCount": 0,
+    "maxBits": 17,
+    "extraTime": 226,
+    "group": "miku",
+    "placeCount": 5341,
+    "replaced": 566,
+    "placedBreak": 125,
+    "bonus": [
+      "mIkuCoMeBacK27pLeAsE",
+      "challenge-fb-follow-2",
+      "challenge-fb-follow-1",
+      "challenge-twitter-share",
+      "shrimpado1024",
+      "challenge-starter-sketcher",
+      "challenge-miku-390",
+      "challenge-master-painter",
+      "challenge-artistic-virtuoso",
+      "challenge-ado-1024",
+      "challenge-replace",
+      "challenge-grandmaster-artisan"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.490Z",
+    "place": 4,
+    "bonusSet": {}
+  }
+}

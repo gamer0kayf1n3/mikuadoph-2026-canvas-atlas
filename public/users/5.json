@@ -1,0 +1,32 @@
+{
+  "user_id": 5,
+  "fetched_at": "20260508_195939",
+  "data": {
+    "id": 5,
+    "username": "mrscrxman",
+    "lastPlacedDate": 1778241553996,
+    "lastBitCount": 0,
+    "maxBits": 16,
+    "extraTime": 12347,
+    "group": "miku",
+    "placeCount": 1292,
+    "replaced": 366,
+    "placedBreak": 92,
+    "bonus": [
+      "challenge-twitter-share",
+      "challenge-fb-follow-2",
+      "challenge-fb-follow-1",
+      "mIkuCoMeBacK27pLeAsE",
+      "challenge-starter-sketcher",
+      "challenge-miku-390",
+      "challenge-master-painter",
+      "shrimpado1024",
+      "challenge-replace",
+      "challenge-artistic-virtuoso",
+      "challenge-ado-1024"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.486Z",
+    "place": 10,
+    "bonusSet": {}
+  }
+}

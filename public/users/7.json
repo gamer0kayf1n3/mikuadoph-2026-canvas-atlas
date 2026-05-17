@@ -1,0 +1,32 @@
+{
+  "user_id": 7,
+  "fetched_at": "20260508_195942",
+  "data": {
+    "id": 7,
+    "username": "myulkie",
+    "lastPlacedDate": 1778211436372,
+    "lastBitCount": 13,
+    "maxBits": 16,
+    "extraTime": 5228,
+    "group": "miku",
+    "placeCount": 1782,
+    "replaced": 467,
+    "placedBreak": 122,
+    "bonus": [
+      "challenge-starter-sketcher",
+      "shrimpado1024",
+      "mIkuCoMeBacK27pLeAsE",
+      "challenge-miku-390",
+      "challenge-master-painter",
+      "challenge-replace",
+      "challenge-twitter-share",
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2",
+      "challenge-artistic-virtuoso",
+      "challenge-ado-1024"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.492Z",
+    "place": 8,
+    "bonusSet": {}
+  }
+}

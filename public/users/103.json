@@ -1,0 +1,32 @@
+{
+  "user_id": 103,
+  "fetched_at": "20260508_200017",
+  "data": {
+    "id": 103,
+    "username": "BearLoaf",
+    "lastPlacedDate": "2026-04-28T13:47:55.619Z",
+    "lastBitCount": 0,
+    "maxBits": 16,
+    "extraTime": 1052,
+    "group": "miku",
+    "placeCount": 3328,
+    "replaced": 367,
+    "placedBreak": 112,
+    "bonus": [
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2",
+      "mIkuCoMeBacK27pLeAsE",
+      "challenge-starter-sketcher",
+      "challenge-twitter-share",
+      "shrimpado1024",
+      "challenge-miku-390",
+      "challenge-master-painter",
+      "challenge-replace",
+      "challenge-artistic-virtuoso",
+      "challenge-ado-1024"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.490Z",
+    "place": 5,
+    "bonusSet": {}
+  }
+}

@@ -9,22 +9,21 @@ const COLORS = [
 
 const MIN_SCALE = 3;
 const MAX_SCALE = 100;
-const SMOOTH = 0.12; // 0 = instant, 1 = never arrives. ~0.1 feels snappy, ~0.05 feels floaty
+const SMOOTH = 0.12;
+const DRAG_THRESHOLD = 4;
 
-function Canvas({ onOutofFocus, onPixelClick, currentE }) {
+function Canvas({ onOutofFocus, onPixelClick, onTransformChange }) {
     const containerRef = useRef<HTMLDivElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
+    const highlightRef = useRef<HTMLDivElement>(null);
+    const highlightPixel = useRef<{ x: number; y: number } | null>(null);
 
-    // All state lives in refs so we can drive it from a requestAnimationFrame loop
-    // without React re-rendering every frame
     const target = useRef({ x: 0, y: 0, scale: 4 });
     const current = useRef({ x: 0, y: 0, scale: 4 });
-    const drag = useRef({ active: false, startX: 0, startY: 0, startOffsetX: 0, startOffsetY: 0 });
+    const drag = useRef({ active: false, didDrag: false, startX: 0, startY: 0, startOffsetX: 0, startOffsetY: 0 });
     const pinch = useRef<{ dist: number } | null>(null);
     const rafId = useRef<number>(0);
 
-    // Apply the current interpolated transform to the canvas DOM node directly —
-    // no React state, no re-renders, just direct style writes at 60fps
     function applyTransform() {
         const canvas = canvasRef.current;
         if (!canvas) return;
@@ -32,20 +31,41 @@ function Canvas({ onOutofFocus, onPixelClick, currentE }) {
             `translate(${current.current.x}px, ${current.current.y}px) scale(${current.current.scale})`;
     }
 
+    function positionHighlight() {
+        const el = highlightRef.current;
+        const p = highlightPixel.current;
+        if (!el || !p) return;
+        const c = current.current;
+        el.style.display = 'block';
+        el.style.left   = `${p.x * c.scale + c.x}px`;
+        el.style.top    = `${p.y * c.scale + c.y}px`;
+        el.style.width  = `${c.scale}px`;
+        el.style.height = `${c.scale}px`;
+    }
+
+    function showHighlight(pixelX: number, pixelY: number) {
+        highlightPixel.current = { x: pixelX, y: pixelY };
+        positionHighlight();
+    }
+
+    function clearHighlight() {
+        highlightPixel.current = null;
+        const el = highlightRef.current;
+        if (el) el.style.display = 'none';
+    }
+
     function lerp(a: number, b: number, t: number) {
         return a + (b - a) * t;
     }
 
-    // The animation loop: every frame, nudge current toward target, apply transform
     function tick() {
         const c = current.current;
         const t = target.current;
-
         c.x = lerp(c.x, t.x, SMOOTH);
         c.y = lerp(c.y, t.y, SMOOTH);
         c.scale = lerp(c.scale, t.scale, SMOOTH);
-
         applyTransform();
+        positionHighlight();
         rafId.current = requestAnimationFrame(tick);
     }
 
@@ -70,7 +90,7 @@ function Canvas({ onOutofFocus, onPixelClick, currentE }) {
                     for (let x = 0; x < width; x++) {
                         const hex = COLORS[grid[y][x]] ?? '#000000';
                         const idx = (y * width + x) * 4;
-                        imageData.data[idx] = parseInt(hex.slice(1, 3), 16);
+                        imageData.data[idx]     = parseInt(hex.slice(1, 3), 16);
                         imageData.data[idx + 1] = parseInt(hex.slice(3, 5), 16);
                         imageData.data[idx + 2] = parseInt(hex.slice(5, 7), 16);
                         imageData.data[idx + 3] = 255;
@@ -78,8 +98,7 @@ function Canvas({ onOutofFocus, onPixelClick, currentE }) {
                 }
                 ctx.putImageData(imageData, 0, 0);
 
-                // Center on load
-                const initX = (container.offsetWidth - width * target.current.scale) / 2;
+                const initX = (container.offsetWidth  - width  * target.current.scale) / 2;
                 const initY = (container.offsetHeight - height * target.current.scale) / 2;
                 target.current.x = initX;
                 target.current.y = initY;
@@ -93,9 +112,6 @@ function Canvas({ onOutofFocus, onPixelClick, currentE }) {
         return () => cancelAnimationFrame(rafId.current);
     }, []);
 
-    // Zoom toward a point (cursorX, cursorY) in container-space.
-    // The trick: keep the point under the cursor fixed while scaling.
-    //   offset_new = cursor - (cursor - offset_old) * (newScale / oldScale)
     function zoomToward(cursorX: number, cursorY: number, newScale: number) {
         const t = target.current;
         const clamped = Math.min(MAX_SCALE, Math.max(MIN_SCALE, newScale));
@@ -105,11 +121,22 @@ function Canvas({ onOutofFocus, onPixelClick, currentE }) {
         t.scale = clamped;
     }
 
+    function hitTestPixel(clientX: number, clientY: number) {
+        const container = containerRef.current!;
+        const rect = container.getBoundingClientRect();
+        const canvasX = Math.floor((clientX - rect.left - current.current.x) / current.current.scale);
+        const canvasY = Math.floor((clientY - rect.top  - current.current.y) / current.current.scale);
+        showHighlight(canvasX, canvasY);
+        onPixelClick?.(canvasX, canvasY);
+        onTransformChange?.(current.current.x, current.current.y, current.current.scale);
+    }
+
     // --- Mouse ---
 
     function onMouseDown(e: React.MouseEvent) {
         drag.current = {
             active: true,
+            didDrag: false,
             startX: e.clientX,
             startY: e.clientY,
             startOffsetX: target.current.x,
@@ -119,15 +146,27 @@ function Canvas({ onOutofFocus, onPixelClick, currentE }) {
 
     function onMouseMove(e: React.MouseEvent) {
         if (!drag.current.active) return;
-        target.current.x = drag.current.startOffsetX + (e.clientX - drag.current.startX);
-        target.current.y = drag.current.startOffsetY + (e.clientY - drag.current.startY);
+        const dx = e.clientX - drag.current.startX;
+        const dy = e.clientY - drag.current.startY;
+        if (!drag.current.didDrag && Math.hypot(dx, dy) < DRAG_THRESHOLD) return;
+        drag.current.didDrag = true;
+        target.current.x = drag.current.startOffsetX + dx;
+        target.current.y = drag.current.startOffsetY + dy;
         onOutofFocus();
+        clearHighlight();
     }
 
-    function onMouseUp() {
+    function onMouseUp(e: React.MouseEvent) {
+        if (drag.current.active && !drag.current.didDrag) {
+            hitTestPixel(e.clientX, e.clientY);
+        }
         drag.current.active = false;
-        //onOutofFocus();
+        drag.current.didDrag = false;
+    }
 
+    function onMouseLeave() {
+        drag.current.active = false;
+        drag.current.didDrag = false;
     }
 
     function onWheel(e: React.WheelEvent) {
@@ -154,6 +193,7 @@ function Canvas({ onOutofFocus, onPixelClick, currentE }) {
             pinch.current = null;
             drag.current = {
                 active: true,
+                didDrag: false,
                 startX: e.touches[0].clientX,
                 startY: e.touches[0].clientY,
                 startOffsetX: target.current.x,
@@ -168,12 +208,15 @@ function Canvas({ onOutofFocus, onPixelClick, currentE }) {
     function onTouchMove(e: React.TouchEvent) {
         e.preventDefault();
         if (e.touches.length === 1 && drag.current.active) {
-            target.current.x = drag.current.startOffsetX + (e.touches[0].clientX - drag.current.startX);
-            target.current.y = drag.current.startOffsetY + (e.touches[0].clientY - drag.current.startY);
+            const dx = e.touches[0].clientX - drag.current.startX;
+            const dy = e.touches[0].clientY - drag.current.startY;
+            if (!drag.current.didDrag && Math.hypot(dx, dy) < DRAG_THRESHOLD) return;
+            drag.current.didDrag = true;
+            target.current.x = drag.current.startOffsetX + dx;
+            target.current.y = drag.current.startOffsetY + dy;
         } else if (e.touches.length === 2 && pinch.current) {
             const newDist = getDistance(e.touches);
             const factor = newDist / pinch.current.dist;
-            // Zoom toward midpoint of the two fingers
             const container = containerRef.current!;
             const rect = container.getBoundingClientRect();
             const midX = ((e.touches[0].clientX + e.touches[1].clientX) / 2) - rect.left;
@@ -182,35 +225,16 @@ function Canvas({ onOutofFocus, onPixelClick, currentE }) {
             pinch.current.dist = newDist;
         }
         onOutofFocus();
+        clearHighlight();
     }
 
-    function onTouchEnd() {
+    function onTouchEnd(e: React.TouchEvent) {
+        if (drag.current.active && !drag.current.didDrag && e.changedTouches.length === 1) {
+            hitTestPixel(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+        }
         drag.current.active = false;
+        drag.current.didDrag = false;
         pinch.current = null;
-        onOutofFocus();
-    }
-
-    function onClick(e: React.MouseEvent) {
-        const container = containerRef.current!;
-        const rect = container.getBoundingClientRect();
-        const clickX = e.clientX - rect.left;
-        const clickY = e.clientY - rect.top;
-        const canvasX = (clickX - current.current.x) / current.current.scale;
-        const canvasY = (clickY - current.current.y) / current.current.scale;
-        onPixelClick?.(Math.floor(canvasX), Math.floor(canvasY));
-        currentE?.(current.current.x, current.current.y, current.current.scale);
-    }
-
-    function onTap(e: React.TouchEvent) {
-        if (e.touches.length > 1) return;
-        const container = containerRef.current!;
-        const rect = container.getBoundingClientRect();
-        const tapX = e.touches[0].clientX - rect.left;
-        const tapY = e.touches[0].clientY - rect.top;
-        const canvasX = (tapX - current.current.x) / current.current.scale;
-        const canvasY = (tapY - current.current.y) / current.current.scale;
-        onPixelClick?.(Math.floor(canvasX), Math.floor(canvasY));
-        currentE?.(current.current.x, current.current.y, current.current.scale);
     }
 
     return (
@@ -219,18 +243,17 @@ function Canvas({ onOutofFocus, onPixelClick, currentE }) {
             onMouseDown={onMouseDown}
             onMouseMove={onMouseMove}
             onMouseUp={onMouseUp}
-            onMouseLeave={onMouseUp}
+            onMouseLeave={onMouseLeave}
             onWheel={onWheel}
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
-            onClick={onClick}
-            onTap={onTap}
             style={{
                 width: '100vw',
                 height: '100vh',
                 overflow: 'hidden',
-                cursor: drag.current.active ? 'grabbing' : 'grab',
+                position: 'relative',
+                cursor: 'grab',
                 background: '#111',
             }}
         >
@@ -240,6 +263,18 @@ function Canvas({ onOutofFocus, onPixelClick, currentE }) {
                     position: 'absolute',
                     transformOrigin: '0 0',
                     imageRendering: 'pixelated',
+                }}
+            />
+            {/* Swap this div's contents for a map pin or any component later */}
+            <div
+                ref={highlightRef}
+                style={{
+                    display: 'none',
+                    position: 'absolute',
+                    boxSizing: 'border-box',
+                    border: '2px solid white',
+                    pointerEvents: 'none',
+                    zIndex: 10,
                 }}
             />
         </div>

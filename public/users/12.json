@@ -1,0 +1,29 @@
+{
+  "user_id": 12,
+  "fetched_at": "20260508_195948",
+  "data": {
+    "id": 12,
+    "username": "smokedbacon",
+    "lastPlacedDate": 1777451986952,
+    "lastBitCount": 0,
+    "maxBits": 13,
+    "extraTime": 929,
+    "group": "ado",
+    "placeCount": 760,
+    "replaced": 171,
+    "placedBreak": 50,
+    "bonus": [
+      "shrimpado1024",
+      "mIkuCoMeBacK27pLeAsE",
+      "challenge-starter-sketcher",
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2",
+      "challenge-twitter-share",
+      "challenge-miku-390",
+      "challenge-master-painter"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.492Z",
+    "place": 13,
+    "bonusSet": {}
+  }
+}

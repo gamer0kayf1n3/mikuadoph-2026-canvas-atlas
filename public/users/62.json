@@ -1,0 +1,33 @@
+{
+  "user_id": 62,
+  "fetched_at": "20260508_200013",
+  "data": {
+    "id": 62,
+    "username": "nova",
+    "lastPlacedDate": 1778025557048,
+    "lastBitCount": 0,
+    "maxBits": 17,
+    "extraTime": 12156,
+    "group": "ado",
+    "placeCount": 5041,
+    "replaced": 1307,
+    "placedBreak": 558,
+    "bonus": [
+      "mIkuCoMeBacK27pLeAsE",
+      "shrimpado1024",
+      "challenge-twitter-share",
+      "challenge-fb-follow-1",
+      "challenge-fb-follow-2",
+      "challenge-starter-sketcher",
+      "challenge-miku-390",
+      "challenge-master-painter",
+      "challenge-replace",
+      "challenge-artistic-virtuoso",
+      "challenge-ado-1024",
+      "challenge-grandmaster-artisan"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.490Z",
+    "place": 2,
+    "bonusSet": {}
+  }
+}

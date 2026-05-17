@@ -1,0 +1,22 @@
+{
+  "user_id": 15,
+  "fetched_at": "20260508_195952",
+  "data": {
+    "id": 15,
+    "username": "LaraRSLH",
+    "lastPlacedDate": "2026-04-24T11:55:04.819Z",
+    "lastBitCount": 0,
+    "maxBits": 6,
+    "extraTime": 13456,
+    "group": "ado",
+    "placeCount": 38,
+    "replaced": 1,
+    "placedBreak": 0,
+    "bonus": [
+      "shrimpado1024"
+    ],
+    "lastUpdated": "2026-04-28T17:16:51.494Z",
+    "place": 27,
+    "bonusSet": {}
+  }
+}

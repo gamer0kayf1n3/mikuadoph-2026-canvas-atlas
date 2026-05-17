@@ -1,0 +1,20 @@
+{
+  "user_id": 107,
+  "fetched_at": "20260508_200024",
+  "data": {
+    "id": 107,
+    "username": "krapkyqc",
+    "lastPlacedDate": "2026-04-26T16:50:16.184Z",
+    "lastBitCount": 5,
+    "maxBits": 5,
+    "extraTime": 0,
+    "group": "miku",
+    "placeCount": 0,
+    "replaced": 0,
+    "placedBreak": 0,
+    "bonus": [],
+    "lastUpdated": "2026-04-28T17:16:51.492Z",
+    "place": 41,
+    "bonusSet": {}
+  }
+}
